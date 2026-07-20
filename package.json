@@ -1,0 +1,19 @@
+{
+  "name": "cypress-tests",
+  "version": "1.0.0",
+  "description": "Тесты для приложения книг",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:open:desktop": "cypress open --config viewportWidth=1920,viewportHeight=1080",
+    "cy:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=812",
+    "test:desktop:headed": "cypress run --config viewportWidth=1920,viewportHeight=1080 --headed",
+    "test:desktop:headless": "cypress run --config viewportWidth=1920,viewportHeight=1080 --headless",
+    "test:mobile:headed": "cypress run --config viewportWidth=375,viewportHeight=812 --headed",
+    "test:mobile:headless": "cypress run --config viewportWidth=375,viewportHeight=812 --headless",
+    "test:all": "npm run test:desktop:headless && npm run test:mobile:headless",
+    "test:all:headed": "npm run test:desktop:headed && npm run test:mobile:headed"
+  },
+  "devDependencies": {
+    "cypress": "^15.18.1"
+  }
+}
